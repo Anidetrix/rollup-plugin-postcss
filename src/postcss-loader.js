@@ -101,6 +101,8 @@ export default {
       plugins.push(require('cssnano')(options.minimize))
     }
 
+    this.warn(this.id)
+
     const postcssOpts = {
       ...this.options.postcss,
       ...config.options,
